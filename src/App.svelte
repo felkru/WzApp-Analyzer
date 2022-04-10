@@ -6,6 +6,7 @@
 
   let txt = "";
   let fileInput;
+  let reciever = prompt("Enter the recipients name:", "Felix Krückel");
 
   function passDownClick(e) {
     fileInput.click();
@@ -39,4 +40,4 @@
 />
 <button id="fileSelect" on:click={passDownClick}>Select some files</button>
 
-<MessageContainer reciever="Felix Krückel" bind:txt />
+<MessageContainer {reciever} bind:txt />
